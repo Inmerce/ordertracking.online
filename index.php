@@ -19,19 +19,30 @@
 
 
   <div class="container">
-    <div class="row d-flex justify-content-between">
-      <div class="col-sm">
+
+    <div class="row">
+      <div class="col-sm d-flex justify-content-center">
         <h1 class="main-heading">Volg je pakket</h1>
       </div>
     </div>
+
     <div class="card">
-      <div class="row d-flex justify-content-between">
-        <div class="col-sm">
-
-        </div>
-
+    <div class="row">
+      <div class="col-md">
+        <h3>Vul je tracking code in</h3>
+        <br>
+        <br>
+        <br>
       </div>
     </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md d-flex justify-content-center">
+        <h5>Heb je geen tracking code? <a href="#">Neem contact op</a></h5>
+      </div>
+    </div>
+
   </div>
 
 

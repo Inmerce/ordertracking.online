@@ -1,13 +1,56 @@
 
 
 
+@import url("https://use.typekit.net/uml7brb.css");
+
 body {
-  color: #212332;
+  font-family: objektiv-mk1, sans-serif;
+  color: #7D7E84;
+  font-size: 14px;
   background-color: #FAFBFC;
   overflow-x: hidden;
   height: 100%;
   background-repeat: no-repeat;
 }
+
+h1 {
+  font-weight: 500;
+  color: #212332;
+  font-size: 26px;
+}
+h2 {
+  font-weight: 500;
+  color: #212332;
+  font-size: 20px;
+}
+h3 {
+  font-weight: 500;
+  color: #212332;
+  font-size: 16px;
+}
+h4 {
+  font-weight: 400;
+  color: #212332;
+  font-size: 16px;
+}
+h5 {
+  font-weight: 400;
+  color: #BEBEC1;
+  font-size: 12px;
+}
+h6 {
+  font-weight: 500;
+  color: #BEBEC1;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+p {
+  font-weight: 400;
+  color: #7D7E84;
+}
+
+
 
 @media (min-width: 992px){
   .container {
@@ -26,7 +69,8 @@ body {
 }
 
 .main-heading{
-  text-align: center;
+  margin-top: 15vh;
+  font-size: 40px;
 }
 
 
