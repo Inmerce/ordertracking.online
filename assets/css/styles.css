@@ -52,6 +52,12 @@ p {
 
 
 
+
+
+/*=============================================================================
+GENERAL LAYOUT
+=============================================================================*/
+
 @media (min-width: 992px){
   .container {
     max-width: 880px;
@@ -64,20 +70,47 @@ p {
   border-radius: 6px;
   padding: 32px;
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.05);
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.divider{
+  background-color: #ECECEC;
+  height: 1px;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .main-heading{
-  margin-top: 15vh;
+  margin-top: 22vh;
   font-size: 40px;
 }
+
+
+
+
+
+/* Tracking code & back button */
+.topbar{
+  margin-top: 12vh;
+  margin-bottom: -12px;
+}
+.topbar .tracking-code{
+
+}
+.topbar .back-button{
+  float: right;
+}
+
+
 
 
 
 /*=============================================================================
 PROGRESSBAR
 =============================================================================*/
+
 #progressbar {
   margin-bottom: 30px;
   overflow: hidden;

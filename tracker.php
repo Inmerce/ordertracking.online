@@ -16,34 +16,69 @@
 
 <body>
 
-
-
   <div class="container">
-    <div class="card">
-      <div class="row">
-        <div class="col-md">
-          <ul id="progressbar" >
-            <li class="active step0"></li>
-            <li class="active step0"></li>
-            <li class="active step0"></li>
-            <li class="step0"></li>
-          </ul>
 
-
-          <h1>Heading 1</h1>
-          <h2>Heading 2</h2>
-          <h3>Heading 3</h3>
-          <h4>Heading 4</h4>
-          <h5>Heading 5</h5>
-          <h6>Heading 6</h6>
-          <p>Paragraph</p>
-
+    <div class="row topbar">
+      <div class="col-auto mr-auto tracking-code">
+        <div class"back-button">
+          <h2>Tracking code:</h2>
         </div>
-
+      </div>
+      <div class="col-auto">
+        <div class"back-button">
+          Back button
+        </div>
       </div>
     </div>
-  </div>
 
+    <div class="row card">
+      <div class="col-md">
+        <ul id="progressbar" >
+          <li class="active step0"></li>
+          <li class="active step0"></li>
+          <li class="active step0"></li>
+          <li class="step0"></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="row card">
+      <div class="col-md">
+        <h2>Bestelgegevens</h2>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="row card">
+      <div class="col-md">
+        <h2>Veelgestelde vragen</h2>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+
+    <div class="row card"> <!-- Remove this later -->
+      <div class="col-md">
+        <h2>Text styles</h2>
+        <br>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <p>Paragraph</p>
+      </div>
+    </div>
+
+  </div>
 
 
 

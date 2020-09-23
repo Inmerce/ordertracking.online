@@ -16,25 +16,21 @@
 
 <body>
 
-
-
   <div class="container">
 
     <div class="row">
-      <div class="col-sm d-flex justify-content-center">
+      <div class="col-md d-flex justify-content-center">
         <h1 class="main-heading">Volg je pakket</h1>
       </div>
     </div>
 
-    <div class="card">
-    <div class="row">
+    <div class="row card">
       <div class="col-md">
         <h3>Vul je tracking code in</h3>
         <br>
         <br>
         <br>
       </div>
-    </div>
     </div>
 
     <div class="row">
