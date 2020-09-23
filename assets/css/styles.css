@@ -74,13 +74,43 @@ GENERAL LAYOUT
   margin-bottom: 30px;
 }
 
-.divider{
-  background-color: #ECECEC;
-  height: 1px;
-  width: 100%;
-  margin-top: 60px;
-  margin-bottom: 60px;
+/* Buttons styles */
+.btn{
+  padding: 0.75em 2em;
+  font-weight: 500;
 }
+.btn:focus{
+  box-shadow: none!important;
+}
+.btn-primary{
+  background-color: #212332;
+  border-color: #212332;
+  font-size: 16px;
+}
+.btn-primary:hover, .btn-primary:not(:disabled):not(.disabled):active{
+  background-color: #383a47;
+  border-color: #383a47;
+}
+.btn-secondary{
+  background-color: white;
+  border-color: #212332;
+  color: #212332;
+  font-size: 12px;
+}
+.btn-secondary:hover, .btn-secondary:not(:disabled):not(.disabled):active{
+  background-color: #ECECEC;
+  border-color: #33364b;
+  color: #212332;
+}
+
+
+
+
+
+
+/*=============================================================================
+CODE CHECK PAGE
+=============================================================================*/
 
 .main-heading{
   margin-top: 22vh;
@@ -90,6 +120,18 @@ GENERAL LAYOUT
 
 
 
+
+/*=============================================================================
+TRACKER PAGE
+=============================================================================*/
+
+.divider{
+  background-color: #ECECEC;
+  height: 1px;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
 
 /* Tracking code & back button */
 .topbar{
@@ -103,14 +145,7 @@ GENERAL LAYOUT
   float: right;
 }
 
-
-
-
-
-/*=============================================================================
-PROGRESSBAR
-=============================================================================*/
-
+/* Progressbar */
 #progressbar {
   margin-bottom: 30px;
   overflow: hidden;

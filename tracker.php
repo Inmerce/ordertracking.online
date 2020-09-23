@@ -21,12 +21,12 @@
     <div class="row topbar">
       <div class="col-auto mr-auto tracking-code">
         <div class"back-button">
-          <h2>Tracking code:</h2>
+          <h2>Tracking code: <span style="color:#3e73e7;">3GS123456789</span></h2>
         </div>
       </div>
       <div class="col-auto">
         <div class"back-button">
-          Back button
+          <a role="button" href="/index.php" class="btn btn-secondary">Ga terug</a>
         </div>
       </div>
     </div>

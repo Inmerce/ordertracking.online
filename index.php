@@ -30,6 +30,7 @@
         <br>
         <br>
         <br>
+        <a role="button" href="/tracker.php" class="btn btn-primary">Zending volgen</a>
       </div>
     </div>
 
