@@ -1,0 +1,126 @@
+
+
+
+body {
+  color: #212332;
+  background-color: #FAFBFC;
+  overflow-x: hidden;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 992px){
+  .container {
+    max-width: 880px;
+  }
+}
+
+.card {
+  z-index: 0;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 32px;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.05);
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.main-heading{
+  text-align: center;
+}
+
+
+
+/*=============================================================================
+PROGRESSBAR
+=============================================================================*/
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  color: #455a64;
+  padding-left: 0px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+#progressbar li {
+  list-style-type: none;
+  font-size: 13px;
+  width: 25%;
+  float: left;
+  position: relative;
+  font-weight: 400;
+}
+
+#progressbar .step0:before {
+  font-family: FontAwesome;
+  content: "\f10c";
+  color: #fff;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+#progressbar li:before {
+  width: 40px;
+  height: 40px;
+  line-height: 45px;
+  display: block;
+  font-size: 20px;
+  background: #ECECEC;
+  border-radius: 50%;
+  margin: auto;
+  padding: 0px;
+}
+
+#progressbar li:after {
+  content: "";
+  width: 100%;
+  height: 12px;
+  background: #ECECEC;
+  position: absolute;
+  left: 0;
+  top: 16px;
+  z-index: -1;
+}
+
+#progressbar li:last-child:after {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  left: -50%;
+}
+
+#progressbar li:nth-child(2):after,
+#progressbar li:nth-child(3):after {
+  left: -50%;
+}
+
+#progressbar li:first-child:after {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  left: 50%;
+}
+
+#progressbar li:last-child:after {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#progressbar li:first-child:after {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+  background: #212332;
+}
+
+#progressbar li.active:before {
+  font-family: FontAwesome;
+  content: "\f00c";
+}
