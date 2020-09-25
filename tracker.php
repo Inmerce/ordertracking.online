@@ -64,7 +64,7 @@
     </div>
 
     <div class="row equal">
-      <div class="col-sm-6">
+      <div class="col-md-6">
         <div class="card card-dark card-equal">
           <h4>Pakket wordt geleverd op</h4>
           <h1>Woensdag 23 september</h1>
