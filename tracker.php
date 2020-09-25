@@ -83,17 +83,17 @@ while($row = mysqli_fetch_assoc($result)){
       <div class="col-md">
         <div class="card">
           <ul id="progressbar" >
-            <li class="active step0"></li>
-            <li class="active step0"></li>
-            <li class="active step0"></li>
-            <li class="step0"></li>
+            <li class="active step1"></li>
+            <li class="active step2"></li>
+            <li class="active step3"></li>
+            <li class="step4"></li>
           </ul>
         </div>
       </div>
     </div>
 
     <div class="row equal">
-      <div class="col-sm-6">
+      <div class="col-md-6">
         <div class="card card-dark card-equal">
           <h4>Pakket wordt geleverd op</h4>
           <h1>Woensdag 23 september</h1>
@@ -122,20 +122,6 @@ while($row = mysqli_fetch_assoc($result)){
           <br>
           <br>
           <br>
-        </div>
-      </div>
-    </div>
-
-    <div class="row"> <!-- Remove this later -->
-      <div class="col-md">
-        <div class="card">
-          <h1>Heading 1</h1>
-          <h2>Heading 2</h2>
-          <h3>Heading 3</h3>
-          <h4>Heading 4</h4>
-          <h5>Heading 5</h5>
-          <h6>Heading 6</h6>
-          <p>Paragraph</p>
         </div>
       </div>
     </div>

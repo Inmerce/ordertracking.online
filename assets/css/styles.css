@@ -60,7 +60,9 @@ a {
 a:hover {
   color: #212332;
 }
-
+svg{
+  margin-top: -2px;
+}
 
 
 
@@ -84,9 +86,8 @@ GENERAL LAYOUT
   margin-top: 18px;
   margin-bottom: 18px;
   border: none;
-
 }
-.equal{
+.equal{ /* Set columns to equal height */
   display: flex;
   display: -webkit-flex;
   flex-wrap: wrap;
@@ -109,7 +110,7 @@ GENERAL LAYOUT
   margin-bottom: 60px;
 }
 
-/* Top rows */
+/* Top rows/controls */
 .mid-row{
   pointer-events: none;
   height: 80px;
@@ -118,11 +119,11 @@ GENERAL LAYOUT
   z-index: 99;
 }
 .index-top-row{
-  margin-top: 25vh;
+  margin-top: 30vh;
   margin-bottom: -65px;
 }
 .tracker-top-row{
-  margin-top: 25vh;
+  margin-top: 15vh;
   margin-bottom: -65px;
 }
 @media (max-width: 768px) {
@@ -179,10 +180,6 @@ CODE CHECK PAGE
   font-size: 36px;
   pointer-events: auto;
 }
-svg{
-  margin-top: -2px;
-}
-
 .tracking-label{
   margin-bottom: 15px;
 }
@@ -198,6 +195,20 @@ svg{
 }
 #tracking-input::placeholder{
   color: #BEBEC1;
+}
+
+@media (max-width: 574px) {
+  .tracking-panel{
+    padding: 30px;
+  }
+  .tracking-panel .btn{
+    width: 100%;
+  }
+  #tracking-input{
+    margin-right: 0px;
+    margin-bottom: 15px;
+    width: 100%;
+  }
 }
 
 
@@ -243,10 +254,27 @@ TRACKER PAGE
   font-weight: 400;
 }
 
-#progressbar .step0:before {
+#progressbar .step1{
   font-family: FontAwesome;
-  content: "\f10c";
-  color: #fff;
+  content: "\f07a";
+}
+#progressbar .step2{
+  font-family: FontAwesome;
+  content: "\f07a";
+}
+#progressbar .step3{
+  font-family: FontAwesome;
+  content: "\f07a";
+}
+#progressbar .step4{
+  font-family: FontAwesome;
+  content: "\f07a";
+}
+
+#progressbar li:before {
+  font-family: FontAwesome;
+  content: "\f07a";
+  color: #BEBEC1;
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -255,9 +283,9 @@ TRACKER PAGE
 }
 
 #progressbar li:before {
-  width: 40px;
-  height: 40px;
-  line-height: 45px;
+  width: 50px;
+  height: 50px;
+  line-height: 55px;
   display: block;
   font-size: 20px;
   background: #ECECEC;
@@ -313,5 +341,6 @@ TRACKER PAGE
 
 #progressbar li.active:before {
   font-family: FontAwesome;
-  content: "\f00c";
+  content: "\f07a";
+  color: white;
 }
