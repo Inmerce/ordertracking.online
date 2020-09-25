@@ -56,8 +56,9 @@
           <h3 class="tracking-label">Vul je tracking code in</h3>
           <div class="input-group form-inline">
             <input type="text" class="form-control" placeholder="Bijvoorbeeld 3ORDT654321" title="Tracking code" id="tracking-input" />
-            <button type="submit" class="btn btn-primary">Zending volgen</button>
+            <button type="submit" class="btn btn-primary" id="tracking_submit">Zending volgen</button>
           </div>
+          <span class="error" id="tracking-input-error"></span>
         </div>
       </div>
     </div>
@@ -87,4 +88,24 @@
   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 </body>
+<script>
+  $("#tracking_submit").click(function(){
+    var tracking_code = $("#tracking-input").val();
+    var tracking_check = true;
+
+    if (tracking_code.length != 12){
+      tracking_check = 'tracking code wordt niet herkend';
+    }
+
+
+    if (tracking_check == true){
+      window.location.href = 'tracker.php?tracking_code='+tracking_code;
+    }else{
+      $("#tracking-input-error").text(tracking_check);
+    }
+    
+
+  });
+
+</script>
 </html>

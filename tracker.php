@@ -1,4 +1,33 @@
+<?php
+require_once("assets/config/config.php");
 
+$tracking_code = $_GET['tracking_code'];
+
+ $result= mysqli_query($link,"SELECT inmerce_order_number FROM trackingcodes WHERE inmerce_trackingcode = '$tracking_code'");
+
+ if(mysqli_num_rows($result) == 1){ 
+  while($row = mysqli_fetch_assoc($result)){
+    $Order_id = $row['inmerce_order_number'];
+  }
+ }
+else{
+  $Order_id = '';
+}
+
+if(!empty($Order_id)){ 
+$result= mysqli_query($link,"SELECT Order_Date,concat(Shipping_First_Name,' ',Shipping_Last_Name) as 'Name',Shipping_Company,
+                              Shipping_Address_1,Shipping_City,Shipping_Postcode FROM Orderfeed WHERE Order_ID = $Order_id");
+
+while($row = mysqli_fetch_assoc($result)){
+  foreach($row as $key=> $value){
+    $Order_info[$key] = $value;
+  }
+}
+}
+
+
+
+?>
 
 
 <!DOCTYPE html>
@@ -44,7 +73,7 @@
 
         <div class="tracking-code-display">
           <h4>Tracking code:</h4>
-          <h1>3GS123456789</h1>
+          <h1><?php echo $tracking_code ?></h1>
         </div>
 
       </div>
@@ -69,15 +98,16 @@
           <h4>Pakket wordt geleverd op</h4>
           <h1>Woensdag 23 september</h1>
           <h3>Tussen 8:00 en 18:00</h3>
+          <?php print_r($Order_info) ?>
         </div>
       </div>
       <div class="col-md-6">
         <div class="card card-equal">
           <h4>Ontvanger</h4>
           <h5>
-            Marcel Bontman<br>
-            Generaal Graftakweg 21<br>
-            1234 XX Oirschot
+            <?php echo $Order_info['Name']  ?><br>
+            <?php echo $Order_info['Shipping_Address_1'] ?><br>
+            <?php echo $Order_info['Shipping_Postcode'].' '.$Order_info['Shipping_City']?>
           </h5>
         </div>
       </div>
