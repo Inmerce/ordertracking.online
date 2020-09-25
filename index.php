@@ -94,7 +94,7 @@
     var tracking_check = true;
 
     if (tracking_code.length != 12){
-      tracking_check = 'tracking code wordt niet herkend';
+      tracking_check = 'Tracking code wordt niet herkend';
     }
 
 
@@ -103,7 +103,7 @@
     }else{
       $("#tracking-input-error").text(tracking_check);
     }
-    
+
 
   });
 

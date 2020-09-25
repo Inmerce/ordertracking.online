@@ -196,6 +196,10 @@ CODE CHECK PAGE
 #tracking-input::placeholder{
   color: #BEBEC1;
 }
+#tracking-input-error{
+  margin-top: 10px;
+  color: #EC3030;
+}
 
 @media (max-width: 574px) {
   .tracking-panel{
@@ -246,12 +250,15 @@ TRACKER PAGE
 }
 
 #progressbar li {
+  font-family: inherit!important;
   list-style-type: none;
-  font-size: 13px;
   width: 25%;
   float: left;
   position: relative;
-  font-weight: 400;
+}
+#progressbar h3{
+  margin-top: 20px;
+  line-height: 1.2;
 }
 
 #progressbar .step1{
