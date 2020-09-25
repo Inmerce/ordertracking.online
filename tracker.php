@@ -1,4 +1,5 @@
 <?php
+
 require_once("assets/config/config.php");
 if(!empty($_GET)){
   $tracking_code = $_GET['tracking_code'];
@@ -18,7 +19,7 @@ else{
   $Order_id = '';
 }
 
-<<<<<<< HEAD
+
 $Orderfeed_columns = array(
   "Order_Date",
   "concat(Shipping_First_Name,' ',Shipping_Last_Name) as 'Name'",
@@ -29,11 +30,11 @@ $Orderfeed_columns = array(
 );
 if(!empty($Order_id)){ 
   $result= mysqli_query($link,"SELECT ".implode(',',$Orderfeed_columns)." FROM Orderfeed WHERE Order_ID = $Order_id");
-=======
+}
 if(!empty($Order_id)){
 $result= mysqli_query($link,"SELECT Order_Date,concat(Shipping_First_Name,' ',Shipping_Last_Name) as 'Name',Shipping_Company,
                               Shipping_Address_1,Shipping_City,Shipping_Postcode FROM Orderfeed WHERE Order_ID = $Order_id");
->>>>>>> master
+
 
   while($row = mysqli_fetch_assoc($result)){
     foreach($row as $key=> $value){
@@ -68,7 +69,7 @@ else{
 
 
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -175,7 +176,6 @@ else{
   <div style="margin: 0 auto; margin-top: 70px; margin-bottom: 70px;">
       <h6 style="text-align: center;">ordertracking.online</h6>
   </div>
-
 
 
 <!-- partial -->
