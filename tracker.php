@@ -83,6 +83,13 @@
 
 
 
+<!-- Footer Credits -->
+  <div style="margin: 0 auto; margin-top: 70px; margin-bottom: 70px;">
+      <h6 style="text-align: center;">ordertracking.online</h6>
+  </div>
+
+
+
 <!-- partial -->
   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
