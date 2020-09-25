@@ -17,26 +17,31 @@ h1 {
   font-weight: 500;
   color: #212332;
   font-size: 26px;
+  line-height: 1.6;
 }
 h2 {
   font-weight: 500;
   color: #212332;
   font-size: 20px;
+  line-height: 1.6;
 }
 h3 {
   font-weight: 500;
   color: #212332;
   font-size: 16px;
+  line-height: 1.6;
 }
 h4 {
-  font-weight: 500;
-  color: #212332;
-  font-size: 12px;
+  font-weight: 400;
+  color: #BEBEC1;
+  font-size: 16px;
+  line-height: 1.6;
 }
 h5 {
   font-weight: 400;
-  color: #BEBEC1;
-  font-size: 12px;
+  color: #212332;
+  font-size: 14px;
+  line-height: 1.6;
 }
 h6 {
   font-weight: 500;
@@ -76,10 +81,61 @@ GENERAL LAYOUT
   border-radius: 6px;
   padding: 32px;
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.08);
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 18px;
+  margin-bottom: 18px;
   border: none;
+
 }
+.equal{
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+.card-equal{
+  height: 85%;
+}
+@media (min-width: 768px) {
+  .row.equal {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.divider{
+  background-color: #ECECEC;
+  height: 1px;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+/* Top rows */
+.mid-row{
+  pointer-events: none;
+  height: 80px;
+}
+.top-row{
+  z-index: 99;
+}
+.index-top-row{
+  margin-top: 25vh;
+  margin-bottom: -65px;
+}
+.tracker-top-row{
+  margin-top: 25vh;
+  margin-bottom: -65px;
+}
+@media (max-width: 768px) {
+  .index-top-row{
+    margin-top: 5vh;
+    margin-bottom: 50px;
+  }
+  .tracker-top-row{
+    margin-top: 5vh;
+    margin-bottom: 50px;
+  }
+}
+
 
 /* Buttons styles */
 .btn{
@@ -110,8 +166,6 @@ GENERAL LAYOUT
   color: #212332;
 }
 
-/* Form/input styles */
-
 
 
 
@@ -120,13 +174,10 @@ GENERAL LAYOUT
 CODE CHECK PAGE
 =============================================================================*/
 
-.tracking-top-row{
-  margin-top: 25vh;
-  margin-bottom: 5px;
-}
 .main-heading{
-  margin-bottom: 1px;
+  margin-top: 15px;
   font-size: 36px;
+  pointer-events: auto;
 }
 svg{
   margin-top: -2px;
@@ -155,24 +206,22 @@ svg{
 TRACKER PAGE
 =============================================================================*/
 
-.divider{
-  background-color: #ECECEC;
-  height: 1px;
-  width: 100%;
-  margin-top: 60px;
-  margin-bottom: 60px;
+.tracking-code-display{
+  text-align: center;
+  margin-bottom: -10px;
+  pointer-events: auto;
+}
+.tracking-code-display h1{
+  color: #3e73e7;
+  line-height: 1;
 }
 
-/* Tracking code & back button */
-.topbar{
-  margin-top: 12vh;
-  margin-bottom: -12px;
+/* Delivery (dark) card */
+.card-dark{
+  background-color:#212332;;
 }
-.topbar .tracking-code{
-
-}
-.topbar .back-button{
-  float: right;
+.card-dark h1, .card-dark h3{
+  color: #fff;
 }
 
 /* Progressbar */

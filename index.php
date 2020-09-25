@@ -19,7 +19,7 @@
 
   <div class="container">
 
-    <div class="row justify-content-md-center tracking-top-row">
+    <div class="row justify-content-md-center top-row index-top-row">
       <div class="col-md-10 d-flex justify-content-between align-items-end">
 
         <a href="#">
@@ -32,24 +32,32 @@
           Hulp nodig?
         </a>
 
-        <h1 class="main-heading">Volg je pakket</h1>
-
         <a href="#">
           Nederlands
           <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
           </svg>
         </a>
-        
+
+      </div>
+    </div>
+
+    <div class="row justify-content-center mid-row">
+      <div class="col-md-10 d-flex justify-content-center">
+
+        <h1 class="main-heading">Volg je pakket</h1>
+
       </div>
     </div>
 
     <div class="row justify-content-md-center">
-      <div class="col-md-10 card tracking-panel">
-        <h3 class="tracking-label">Vul je tracking code in</h3>
-        <div class="input-group form-inline">
-          <input type="text" class="form-control" placeholder="Bijvoorbeeld 3ORDT654321" title="Tracking code" id="tracking-input" />
-          <button type="submit" class="btn btn-primary">Zending volgen</button>
+      <div class="col-md-10">
+        <div class="card tracking-panel">
+          <h3 class="tracking-label">Vul je tracking code in</h3>
+          <div class="input-group form-inline">
+            <input type="text" class="form-control" placeholder="Bijvoorbeeld 3ORDT654321" title="Tracking code" id="tracking-input" />
+            <button type="submit" class="btn btn-primary">Zending volgen</button>
+          </div>
         </div>
       </div>
     </div>

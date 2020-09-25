@@ -19,63 +19,94 @@
 
   <div class="container">
 
-    <div class="row topbar">
-      <div class="col-auto mr-auto tracking-code">
-        <div class"back-button">
-          <h2>Tracking code: <span style="color:#3e73e7;">3GS123456789</span></h2>
-        </div>
+    <div class="row justify-content-md-center top-row tracker-top-row">
+      <div class="col-md d-flex justify-content-between align-items-end">
+
+        <a href="index.php">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg>
+          Vorige pagina
+        </a>
+
+        <a href="#">
+          Nederlands
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </a>
+
       </div>
-      <div class="col-auto">
-        <div class"back-button">
-          <a role="button" href="/index.php" class="btn btn-secondary">Ga terug</a>
+    </div>
+
+    <div class="row justify-content-center mid-row">
+      <div class="col-md d-flex justify-content-center">
+
+        <div class="tracking-code-display">
+          <h4>Tracking code:</h4>
+          <h1>3GS123456789</h1>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md">
+        <div class="card">
+          <ul id="progressbar" >
+            <li class="active step0"></li>
+            <li class="active step0"></li>
+            <li class="active step0"></li>
+            <li class="step0"></li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <div class="row card">
-      <div class="col-md">
-        <ul id="progressbar" >
-          <li class="active step0"></li>
-          <li class="active step0"></li>
-          <li class="active step0"></li>
-          <li class="step0"></li>
-        </ul>
+    <div class="row equal">
+      <div class="col-sm-6">
+        <div class="card card-dark card-equal">
+          <h4>Pakket wordt geleverd op</h4>
+          <h1>Woensdag 23 september</h1>
+          <h3>Tussen 8:00 en 18:00</h3>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card card-equal">
+          <h4>Ontvanger</h4>
+          <h5>
+            Marcel Bontman<br>
+            Generaal Graftakweg 21<br>
+            1234 XX Oirschot
+          </h5>
+        </div>
       </div>
     </div>
 
     <div class="divider"></div>
 
-    <div class="row card">
+    <div class="row">
       <div class="col-md">
-        <h2>Bestelgegevens</h2>
-        <br>
-        <br>
-        <br>
+        <div class="card">
+          <h1>Veelgestelde vragen</h1>
+          <br>
+          <br>
+          <br>
+        </div>
       </div>
     </div>
 
-    <div class="divider"></div>
-
-    <div class="row card">
+    <div class="row"> <!-- Remove this later -->
       <div class="col-md">
-        <h2>Veelgestelde vragen</h2>
-        <br>
-        <br>
-        <br>
-      </div>
-    </div>
-
-    <div class="row card"> <!-- Remove this later -->
-      <div class="col-md">
-        <h2>Text styles</h2>
-        <br>
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <h6>Heading 6</h6>
-        <p>Paragraph</p>
+        <div class="card">
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+          <p>Paragraph</p>
+        </div>
       </div>
     </div>
 
