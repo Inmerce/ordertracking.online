@@ -1,7 +1,11 @@
 <?php
 require_once("assets/config/config.php");
-
-$tracking_code = $_GET['tracking_code'];
+if(!empty($_GET)){
+  $tracking_code = $_GET['tracking_code'];
+}
+else{
+  $tracking_code = '';
+}
 
  $result= mysqli_query($link,"SELECT inmerce_order_number FROM trackingcodes WHERE inmerce_trackingcode = '$tracking_code'");
 
@@ -14,17 +18,44 @@ else{
   $Order_id = '';
 }
 
+$Orderfeed_columns = array(
+  "Order_Date",
+  "concat(Shipping_First_Name,' ',Shipping_Last_Name) as 'Name'",
+  "Shipping_Company",
+  "Shipping_Address_1",
+  "Shipping_City",
+  "Shipping_Postcode"
+);
 if(!empty($Order_id)){ 
-$result= mysqli_query($link,"SELECT Order_Date,concat(Shipping_First_Name,' ',Shipping_Last_Name) as 'Name',Shipping_Company,
-                              Shipping_Address_1,Shipping_City,Shipping_Postcode FROM Orderfeed WHERE Order_ID = $Order_id");
+  $result= mysqli_query($link,"SELECT ".implode(',',$Orderfeed_columns)." FROM Orderfeed WHERE Order_ID = $Order_id");
 
-while($row = mysqli_fetch_assoc($result)){
-  foreach($row as $key=> $value){
-    $Order_info[$key] = $value;
+  while($row = mysqli_fetch_assoc($result)){
+    foreach($row as $key=> $value){
+      $Order_info[$key] = $value;
+    }
+  }
+
+  $result = mysqli_query($link,"SELECT delivery_day FROM tracking_info WHERE inmerce_order_number = $Order_id ORDER BY mail_date DESC");
+  echo "SELECT delivery_day FROM tracking_info WHERE inmerce_order_number = $Order_id ORDER BY mail_date DESC limit 1";
+  if(mysqli_num_rows($result) > 0){
+    while($row = mysqli_fetch_assoc($result)){
+      foreach($row as $key=> $value){
+        $delivery_day = $value;
+      }
+      if(!empty($delivery_day)){
+      break;
+      }
+
+    }
   }
 }
-}
+else{
+  foreach($Orderfeed_columns as $key){
+    $Order_info[$key] = '';
+  }
+  $Order_info['Name'] = '';
 
+}
 
 
 ?>
@@ -95,19 +126,23 @@ while($row = mysqli_fetch_assoc($result)){
     <div class="row equal">
       <div class="col-md-6">
         <div class="card card-dark card-equal">
+          <?php if(isset($delivery_day)){ ?>
           <h4>Pakket wordt geleverd op</h4>
-          <h1>Woensdag 23 september</h1>
-          <h3>Tussen 8:00 en 18:00</h3>
-          <?php print_r($Order_info) ?>
+          <h1><?php echo $delivery_day ?></h1>     
+          <h3><?php echo 'Tussen 8:00 en 18:00'?></h3>
+          <?php }else{ ?>
+          <h1><?php echo 'Tracking niet beschikbaar'?></h1>
+          <?php } ?>
         </div>
       </div>
       <div class="col-md-6">
         <div class="card card-equal">
           <h4>Ontvanger</h4>
           <h5>
-            <?php echo $Order_info['Name']  ?><br>
-            <?php echo $Order_info['Shipping_Address_1'] ?><br>
-            <?php echo $Order_info['Shipping_Postcode'].' '.$Order_info['Shipping_City']?>
+          <?php  if(!empty($Order_info['Shipping_Company'])){echo $Order_info['Shipping_Company'].'<br>';}  ?>
+          <?php  if(!empty($Order_info['Name'])){echo $Order_info['Name'].'<br>';}  ?>
+          <?php  if(!empty($Order_info['Shipping_Address_1'])){echo $Order_info['Shipping_Address_1'].'<br>';}  ?>
+          <?php  if(!empty($Order_info['Shipping_Postcode']) && !empty($Order_info['Shipping_City'])){echo $Order_info['Shipping_Postcode'].' '.$Order_info['Shipping_City'];} ?>
           </h5>
         </div>
       </div>
