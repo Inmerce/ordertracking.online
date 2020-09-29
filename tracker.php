@@ -8,11 +8,13 @@ else{
   $tracking_code = '';
 }
 
- $result= mysqli_query($link,"SELECT inmerce_order_number FROM trackingcodes WHERE inmerce_trackingcode = '$tracking_code'");
+ $result= mysqli_query($link,"SELECT inmerce_order_number, delivery_date, delivery_phase FROM trackingcodes WHERE inmerce_trackingcode = '$tracking_code'");
 
  if(mysqli_num_rows($result) == 1){
   while($row = mysqli_fetch_assoc($result)){
     $Order_id = $row['inmerce_order_number'];
+    $delivery_day = $row['delivery_date'];
+    $delivery_phase = $row['delivery_phase'];
   }
  }
 else{
@@ -28,33 +30,16 @@ $Orderfeed_columns = array(
   "Shipping_City",
   "Shipping_Postcode"
 );
-if(!empty($Order_id)){ 
-  $result= mysqli_query($link,"SELECT ".implode(',',$Orderfeed_columns)." FROM Orderfeed WHERE Order_ID = $Order_id");
-}
 if(!empty($Order_id)){
-$result= mysqli_query($link,"SELECT Order_Date,concat(Shipping_First_Name,' ',Shipping_Last_Name) as 'Name',Shipping_Company,
-                              Shipping_Address_1,Shipping_City,Shipping_Postcode FROM Orderfeed WHERE Order_ID = $Order_id");
+  $result= mysqli_query($link,"SELECT Order_Date,concat(Shipping_First_Name,' ',Shipping_Last_Name) as 'Name',Shipping_Company,
+                                Shipping_Address_1,Shipping_City,Shipping_Postcode FROM Orderfeed WHERE Order_ID = $Order_id");
 
 
-  while($row = mysqli_fetch_assoc($result)){
-    foreach($row as $key=> $value){
-      $Order_info[$key] = $value;
-    }
-  }
-
-  $result = mysqli_query($link,"SELECT delivery_day FROM tracking_info WHERE inmerce_order_number = $Order_id ORDER BY mail_date DESC");
-  echo "SELECT delivery_day FROM tracking_info WHERE inmerce_order_number = $Order_id ORDER BY mail_date DESC limit 1";
-  if(mysqli_num_rows($result) > 0){
     while($row = mysqli_fetch_assoc($result)){
       foreach($row as $key=> $value){
-        $delivery_day = $value;
+        $Order_info[$key] = $value;
       }
-      if(!empty($delivery_day)){
-      break;
-      }
-
     }
-  }
 }
 else{
   foreach($Orderfeed_columns as $key){
@@ -120,11 +105,11 @@ else{
     <div class="row">
       <div class="col-md">
         <div class="card">
-          <ul id="progressbar" >
-            <li class="active step1"><h3>Order geplaatst</h3></li>
-            <li class="active step2"><h3>Pakket verzonden</h3></li>
-            <li class="active step3"><h3>Bezorger onderweg</h3></li>
-            <li class="step4"><h3>Pakket bezorgd</h3></li>
+          <ul id="progressbar">
+            <li class="step1 <?php if($delivery_phase>=1) echo "active"?>"><h3>Order geplaatst</h3></li>
+            <li class="step2 <?php if($delivery_phase>=2) echo "active"?>"><h3>Pakket verzonden</h3></li>
+            <li class="step3 <?php if($delivery_phase>=3) echo "active"?>"><h3>Bezorger onderweg</h3></li>
+            <li class="step4 <?php if($delivery_phase>=4) echo "active"?>"><h3>Pakket bezorgd</h3></li>
           </ul>
         </div>
       </div>
