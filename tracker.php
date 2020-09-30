@@ -148,8 +148,9 @@ else{
         <div class="card">
           <h1>Veelgestelde vragen</h1>
 
+
           <div id="accordion_search_bar_container">
-            <input type="search" id="accordion_search_bar" placeholder="Search" />
+            <input class="form-control" type="search" id="accordion_search_bar" placeholder="Zoek naar een antwoord" />
           </div>
 
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -158,11 +159,9 @@ else{
 
             <div class="panel" id="collapseOne_container">
               <div class="panel-heading" role="tab" id="headingOne">
-                <h4 class="panel-title">
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
-                    One
-                  </a>
-                </h4>
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                  <h3>One</h3>
+                </a>
               </div>
               <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
