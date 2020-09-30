@@ -118,7 +118,7 @@ else{
     <div class="row equal">
       <div class="col-md-6">
         <div class="card card-dark card-equal">
-          <?php if(isset($delivery_day)){ ?>
+          <?php if(isset($delivery_day) && !empty($delivery_day)){ ?>
           <h4>Pakket wordt geleverd op</h4>
           <h1><?php echo $delivery_day ?></h1>     
           <h3><?php echo 'Tussen 8:00 en 18:00'?></h3>
