@@ -22,7 +22,7 @@
     <div class="row justify-content-md-center top-row index-top-row">
       <div class="col-md-10 d-flex justify-content-between align-items-end">
 
-        <a href="#">
+        <a href="#" style="display:none;">
           <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-headset" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M8 1a5 5 0 0 0-5 5v4.5H2V6a6 6 0 1 1 12 0v4.5h-1V6a5 5 0 0 0-5-5z"/>
             <path d="M11 8a1 1 0 0 1 1-1h2v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V8zM5 8a1 1 0 0 0-1-1H2v4a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V8z"/>
@@ -32,7 +32,7 @@
           Hulp nodig?
         </a>
 
-        <a href="#">
+        <a href="#" style="display:none;">
           Nederlands
           <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -63,20 +63,12 @@
       </div>
     </div>
 
-    <!--
-    <div class="row">
-      <div class="col-md d-flex justify-content-center">
-        <h5>Heb je geen tracking code? <a href="#">Neem contact op</a></h5>
-      </div>
-    </div>
-  -->
-
   </div>
 
 
 
 <!-- Footer Credits -->
-  <div style="position: absolute; left: 50%; bottom: 60px;">
+  <div style="position: absolute; left: 50%; top: 92vh;">
     <div style="position: relative; left: -50%;">
       <h6>ordertracking.online</h6>
     </div>
@@ -87,6 +79,9 @@
 <!-- Scripts -->
   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <script type="text/javascript" src='assets/js/main.js'></script>
+
 </body>
 <script>
   $("#tracking_submit").click(function(){

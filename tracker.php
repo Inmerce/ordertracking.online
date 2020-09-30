@@ -62,6 +62,7 @@ else{
   <title>Order Tracking Online</title>
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
@@ -81,7 +82,7 @@ else{
           Vorige pagina
         </a>
 
-        <a href="#">
+        <a href="#" style="display:none;">
           Nederlands
           <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -120,7 +121,7 @@ else{
         <div class="card card-dark card-equal">
           <?php if(isset($delivery_day) && !empty($delivery_day)){ ?>
           <h4>Pakket wordt geleverd op</h4>
-          <h1><?php echo $delivery_day ?></h1>     
+          <h1><?php echo $delivery_day ?></h1>
           <h3><?php echo 'Tussen 8:00 en 18:00'?></h3>
           <?php }else{ ?>
           <h1><?php echo 'Tracking niet beschikbaar'?></h1>
@@ -146,9 +147,40 @@ else{
       <div class="col-md">
         <div class="card">
           <h1>Veelgestelde vragen</h1>
-          <br>
-          <br>
-          <br>
+
+          <div id="accordion_search_bar_container">
+            <input type="search" id="accordion_search_bar" placeholder="Search" />
+          </div>
+
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+
+
+            <div class="panel" id="collapseOne_container">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                    One
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                  <p>Pellentesque convallis dolor</p>
+                  <p>Enim at tincidunt magna dapibus vitae</p>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
         </div>
       </div>
     </div>
@@ -164,7 +196,9 @@ else{
 
 
 <!-- partial -->
-  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script type="text/javascript" src='assets/js/main.js'></script>
 </body>
 </html>

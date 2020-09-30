@@ -239,6 +239,8 @@ TRACKER PAGE
   color: #fff;
 }
 
+
+
 /* Progressbar */
 #progressbar {
   margin-bottom: 30px;
@@ -350,4 +352,38 @@ TRACKER PAGE
   font-family: FontAwesome;
   content: "\f07a";
   color: white;
+}
+
+
+
+/* FAQ */
+#page_container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#accordion_search_bar_container {
+  position: relative;
+}
+#accordion_search_bar_container:after {
+  content: '\e003';
+  font-family: Glyphicons Halflings;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+#accordion_search_bar_container #accordion_search_bar {
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+  padding: 7px 10px;
+  border: 1px solid #cacaca;
+  border-radius: 25px;
+  outline: 0;
+}
+
+.panel-title a {
+  display: block;
 }
