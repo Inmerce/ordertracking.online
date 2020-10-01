@@ -61,7 +61,7 @@ else{
   <link rel="icon" href="assets/img/search-location-solid.svg">
   <title>Order Tracking Online</title>
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -107,10 +107,10 @@ else{
       <div class="col-md">
         <div class="card">
           <ul id="progressbar">
-            <li class="step1 <?php if($delivery_phase>=1) echo "active"?>"><h3>Order geplaatst</h3></li>
-            <li class="step2 <?php if($delivery_phase>=2) echo "active"?>"><h3>Pakket verzonden</h3></li>
-            <li class="step3 <?php if($delivery_phase>=3) echo "active"?>"><h3>Bezorger onderweg</h3></li>
-            <li class="step4 <?php if($delivery_phase>=4) echo "active"?>"><h3>Pakket bezorgd</h3></li>
+            <li class="step1 <?php if($delivery_phase>=1) echo "active"?>"><i class="fas fa-shopping-cart"></i><h3>Order geplaatst</h3></li>
+            <li class="step2 <?php if($delivery_phase>=2) echo "active"?>"><i class="fas fa-dolly"></i><h3>Pakket verzonden</h3></li>
+            <li class="step3 <?php if($delivery_phase>=3) echo "active"?>"><i class="fas fa-truck"></i><h3>Bezorger onderweg</h3></li>
+            <li class="step4 <?php if($delivery_phase>=4) echo "active"?>"><i class="fas fa-smile-beam"></i><h3>Pakket bezorgd</h3></li>
           </ul>
         </div>
       </div>

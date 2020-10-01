@@ -28,20 +28,20 @@ h2 {
 h3 {
   font-weight: 500;
   color: #212332;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.6;
 }
 h4 {
   font-weight: 400;
   color: #BEBEC1;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.6;
 }
 h5 {
   font-weight: 400;
   color: #212332;
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 h6 {
   font-weight: 500;
@@ -87,14 +87,6 @@ GENERAL LAYOUT
   margin-top: 18px;
   margin-bottom: 18px;
   border: none;
-}
-.equal{ /* Set columns to equal height */
-  display: flex;
-  display: -webkit-flex;
-  flex-wrap: wrap;
-}
-.card-equal{
-  height: 85%;
 }
 @media (min-width: 768px) {
   .row.equal {
@@ -239,8 +231,19 @@ TRACKER PAGE
 .card-dark h1, .card-dark h3{
   color: #fff;
 }
-
-
+.card-dark h1{
+  margin-top: 0;
+  margin-bottom: -8px;
+}
+.equal{ /* Set columns to equal height */
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+.card-equal{
+  height: 83%;
+  padding: 24px 32px;
+}
 
 /* Progressbar */
 #progressbar {
@@ -264,26 +267,45 @@ TRACKER PAGE
   line-height: 1.2;
 }
 
-#progressbar .step1{
-  font-family: FontAwesome;
-  content: "\f07a";
+#progressbar i{
+  position: absolute;
+  margin-top: -37px;
+  margin-left: -12px;
+  font-size: 25px;
 }
-#progressbar .step2{
-  font-family: FontAwesome;
-  content: "\f07a";
+
+#progressbar .step1 i, #progressbar .step2 i, #progressbar .step3 i, #progressbar .step4 i{
+  color: #BEBEC1;
 }
-#progressbar .step3{
-  font-family: FontAwesome;
-  content: "\f07a";
+#progressbar .step1 i{
+  color: #BEBEC1;
 }
-#progressbar .step4{
-  font-family: FontAwesome;
-  content: "\f07a";
+#progressbar .step2 i{
+  color: #BEBEC1;
+}
+#progressbar .step3 i{
+  color: #BEBEC1;
+}
+#progressbar .step4 i{
+  color: #BEBEC1;
+}
+
+#progressbar .step1.active i{
+  color: white;
+}
+#progressbar .step2.active i{
+  color: white;
+}
+#progressbar .step3.active i{
+  color: white;
+}
+#progressbar .step4.active i{
+  color: white;
 }
 
 #progressbar li:before {
-  font-family: FontAwesome;
-  content: "\f07a";
+  font-family: "Font Awesome 5 Free";
+  content: "";
   color: #BEBEC1;
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
@@ -311,7 +333,7 @@ TRACKER PAGE
   background: #ECECEC;
   position: absolute;
   left: 0;
-  top: 16px;
+  top: 19px;
   z-index: -1;
 }
 
@@ -347,12 +369,6 @@ TRACKER PAGE
 #progressbar li.active:before,
 #progressbar li.active:after {
   background: #212332;
-}
-
-#progressbar li.active:before {
-  font-family: FontAwesome;
-  content: "\f07a";
-  color: white;
 }
 
 
