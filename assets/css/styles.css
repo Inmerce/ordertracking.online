@@ -53,6 +53,7 @@ h6 {
 p {
   font-weight: 400;
   color: #7D7E84;
+  line-height: 1.6;
 }
 a {
   color: #212332;
@@ -374,9 +375,39 @@ TRACKER PAGE
   color: #BEBEC1;
 }
 
-.panel-title a {
-  display: block;
+.panel-heading{
+  padding: 10px 0px;
 }
+.panel-heading h3{
+  color: #3e73e7;
+}
+.collapsed h3{
+  color: #212332;
+}
+.panel-heading a:hover h3{
+  color: #3e73e7!important;
+}
+.panel-heading a:hover{
+  text-decoration: none;
+}
+.panel-heading a:focus{
+  outline: none;
+  text-decoration: none;
+}
+
+.glyphicon{
+  color: #212332;
+  margin-top: -30px;
+}
+.panel-heading a:hover .glyphicon{
+  color: #3e73e7;
+}
+.glyphicon-minus{
+  color: #3e73e7;
+}
+
 .panel-group .panel-heading+.panel-collapse>.panel-body {
     border-top: none;
+    padding: 0px 0px 5px 0px;
+    max-width: 660px;
 }

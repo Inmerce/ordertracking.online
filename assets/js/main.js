@@ -14,3 +14,14 @@
     });
   });
 }());
+
+
+$('#accordion')
+  .on('show.bs.collapse', function(e) {
+     $(e.target).prev('.panel-heading').find('div').removeClass('glyphicon glyphicon-plus');
+     $(e.target).prev('.panel-heading').find('div').addClass('glyphicon glyphicon-minus');
+  })
+  .on('hide.bs.collapse', function(e) {
+   $(e.target).prev('.panel-heading').find('div').removeClass('glyphicon glyphicon-minus');
+   $(e.target).prev('.panel-heading').find('div').addClass('glyphicon glyphicon-plus');
+  });

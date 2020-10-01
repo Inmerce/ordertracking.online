@@ -155,18 +155,82 @@ else{
 
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-
-
-            <div class="panel" id="collapseOne_container">
-              <div class="panel-heading" role="tab" id="headingOne">
-                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
-                  <h3>One</h3>
+            <div class="panel" id="collapse1_container">
+              <div class="panel-heading " role="tab" id="heading1">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1" class="collapsed">
+                  <h3>Hoe snel wordt mijn pakket bezorgd?</h3>
+                  <div class="glyphicon glyphicon-plus" style="float:right;position:relative;"></div>
                 </a>
               </div>
-              <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+              <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
                 <div class="panel-body">
-                  <p>Pellentesque convallis dolor</p>
-                  <p>Enim at tincidunt magna dapibus vitae</p>
+                  <p>
+                    Met bovenstaande tracking informatie proberen we je een zo accuraat mogelijke leverdatum te geven. Vanwege het coronavirus kan het gebeuren dat je pakket langer onderweg is dan gepland. De bezorgduur van pakketten naar het buitenland hangt af van de bestemming.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel" id="collapse2_container">
+              <div class="panel-heading" role="tab" id="heading2">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2" class="collapsed">
+                  <h3>Hoe weet ik waar mijn pakket is?</h3>
+                  <div class="glyphicon glyphicon-plus" style="float:right;position:relative;"></div>
+                </a>
+              </div>
+              <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                <div class="panel-body">
+                  <p>
+                    Met de tracking code die je van de verkoper hebt gekregen kun je zien waar je pakketje zich bevindt. Het kan voorkomen dat de tracking data (nog) niet beschikbaar is. Wacht dan een paar uur of neem contact op met de afzender.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel" id="collapse3_container">
+              <div class="panel-heading" role="tab" id="heading3">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3" class="collapsed">
+                  <h3>Waar kan ik op rekenen als er iets verkeerd gaat?</h3>
+                  <div class="glyphicon glyphicon-plus" style="float:right;position:relative;"></div>
+                </a>
+              </div>
+              <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                <div class="panel-body">
+                  <p>
+                    Ondanks de hoge kwaliteitsstandaarden, gaat er met die enorme hoeveelheden pakketten die dagelijks van A naar B gaan ook weleens wat mis. Neem contact op met de afzender en die helpt je graag verder!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel" id="collapse4_container">
+              <div class="panel-heading" role="tab" id="heading4">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4" class="collapsed">
+                  <h3>Wat moet ik doen als mijn pakket vertraagd of zoek is?</h3>
+                  <div class="glyphicon glyphicon-plus" style="float:right;position:relative;"></div>
+                </a>
+              </div>
+              <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                <div class="panel-body">
+                  <p>
+                    Neem in dat geval contact op met de afzender. Bijvoorbeeld de klantenservice van de webshop waar je het pakket hebt besteld. Zij helpen je verder en kunnen bij de bezorgdienst een onderzoek opstarten als er iets mis is.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel" id="collapse5_container">
+              <div class="panel-heading" role="tab" id="heading5">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5" class="collapsed">
+                  <h3>Ik geen tracking code (meer). Wat nu?</h3>
+                  <div class="glyphicon glyphicon-plus" style="float:right;position:relative;"></div>
+                </a>
+              </div>
+              <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                <div class="panel-body">
+                  <p>
+                    Als je geen tracking code (meer) hebt, raden wij je aan contact op te nemen met de afzender van je pakket. Bijvoorbeeld de klantenservice van de webshop of marketplace waar je het pakket hebt besteld. De tracking code is bekend bij de afzender.
+                  </p>
                 </div>
               </div>
             </div>
