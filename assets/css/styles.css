@@ -121,11 +121,11 @@ GENERAL LAYOUT
 }
 .index-top-row{
   margin-top: 30vh;
-  margin-bottom: -65px;
+  margin-bottom: -72px;
 }
 .tracker-top-row{
   margin-top: 15vh;
-  margin-bottom: -65px;
+  margin-bottom: -72px;
 }
 @media (max-width: 768px) {
   .index-top-row{
@@ -229,7 +229,7 @@ TRACKER PAGE
 }
 .tracking-code-display h1{
   color: #3e73e7;
-  line-height: 1;
+  line-height: 0.5;
 }
 
 /* Delivery (dark) card */
