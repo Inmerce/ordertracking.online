@@ -146,7 +146,7 @@ else{
     <div class="row">
       <div class="col-md">
         <div class="card">
-          <h1>Veelgestelde vragen</h1>
+          <h1 class='faq-heading'>Veelgestelde vragen</h1>
 
 
           <div id="accordion_search_bar_container">

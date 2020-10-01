@@ -358,6 +358,28 @@ TRACKER PAGE
 
 
 /* FAQ */
+#accordion_search_bar_container{
+  margin-top: 10px;
+  margin-bottom: 1px;
+  padding-bottom: 30px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+@media (min-width: 768px) {
+  .faq-heading{
+    margin-top: 15px;
+    margin-bottom: 1px;
+    padding-bottom: 45px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  }
+  #accordion_search_bar_container{
+    width: 350px;
+    float: right;
+    right: 32px;
+    position: absolute;
+    margin-top: 0px;
+    box-shadow: none;
+  }
+}
 #accordion_search_bar_container #accordion_search_bar {
   display: block;
   margin: 10px auto;
@@ -376,7 +398,7 @@ TRACKER PAGE
 }
 
 .panel-heading{
-  padding: 10px 0px;
+  padding: 0px 0px 12px 0px;
 }
 .panel-heading h3{
   color: #3e73e7;
@@ -408,6 +430,6 @@ TRACKER PAGE
 
 .panel-group .panel-heading+.panel-collapse>.panel-body {
     border-top: none;
-    padding: 0px 0px 5px 0px;
+    padding: 0px 0px 15px 0px;
     max-width: 660px;
 }
