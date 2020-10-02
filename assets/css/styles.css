@@ -235,6 +235,9 @@ TRACKER PAGE
   margin-top: 0;
   margin-bottom: -8px;
 }
+.card-dark h4{
+  opacity: 0.65;
+}
 .equal{ /* Set columns to equal height */
   display: flex;
   display: -webkit-flex;

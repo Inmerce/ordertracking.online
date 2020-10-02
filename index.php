@@ -55,7 +55,7 @@
         <div class="card tracking-panel">
           <h3 class="tracking-label">Vul je tracking code in</h3>
           <div class="input-group form-inline">
-            <input type="text" class="form-control" placeholder="Bijvoorbeeld 3ORDT654321" title="Tracking code" id="tracking-input" />
+            <input type="text" class="form-control" placeholder="10-Cijferige 'OT' code" title="Tracking code" id="tracking-input" />
             <button type="submit" class="btn btn-primary" id="tracking_submit">Zending volgen</button>
           </div>
           <span class="error" id="tracking-input-error"></span>
