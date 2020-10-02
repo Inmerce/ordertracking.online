@@ -143,7 +143,7 @@ else{
           <div class="order-id-div">
             <h4>Order ID</h4>
             <h5>
-              #<?php  if(!empty($Order_info['Order_ID'])){echo $Order_info['Order_ID'].'<br>';}  ?>
+              <?php  if(!empty($Order_info['Order_ID'])){echo '#'.$Order_info['Order_ID'].'<br>';}  ?>
             </h5>
           </div>
         </div>
