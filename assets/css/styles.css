@@ -244,16 +244,30 @@ TRACKER PAGE
   height: 83%;
   padding: 24px 32px;
 }
+.order-id-div{
+  position: absolute;
+  right: 36px;
+}
+
+
 
 /* Progressbar */
 #progressbar {
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   overflow: hidden;
   color: #455a64;
   padding-left: 0px;
-  margin-top: 30px;
   text-align: center;
 }
+@media (max-width: 482px) {
+  #progressbar {
+    width: 120%;
+    margin-left: -10%;
+  }
+}
+
+
 
 #progressbar li {
   font-family: inherit!important;
@@ -269,25 +283,27 @@ TRACKER PAGE
 
 #progressbar i{
   position: absolute;
-  margin-top: -37px;
-  margin-left: -12px;
-  font-size: 25px;
-}
-
-#progressbar .step1 i, #progressbar .step2 i, #progressbar .step3 i, #progressbar .step4 i{
   color: #BEBEC1;
 }
 #progressbar .step1 i{
-  color: #BEBEC1;
+  margin-top: -34px;
+    margin-left: -12px;
+    font-size: 19px;
 }
 #progressbar .step2 i{
-  color: #BEBEC1;
+  margin-top: -33px;
+      margin-left: -11px;
+      font-size: 20px;
 }
 #progressbar .step3 i{
-  color: #BEBEC1;
+  margin-top: -34px;
+      margin-left: -11px;
+      font-size: 19px;
 }
 #progressbar .step4 i{
-  color: #BEBEC1;
+  margin-top: -35px;
+  margin-left: -10px;
+  font-size: 22px;
 }
 
 #progressbar .step1.active i{

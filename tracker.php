@@ -23,6 +23,7 @@ else{
 
 
 $Orderfeed_columns = array(
+  "Order_ID",
   "Order_Date",
   "concat(Shipping_First_Name,' ',Shipping_Last_Name) as 'Name'",
   "Shipping_Company",
@@ -31,7 +32,7 @@ $Orderfeed_columns = array(
   "Shipping_Postcode"
 );
 if(!empty($Order_id)){
-  $result= mysqli_query($link,"SELECT Order_Date,concat(Shipping_First_Name,' ',Shipping_Last_Name) as 'Name',Shipping_Company,
+  $result= mysqli_query($link,"SELECT Order_Date,concat(Shipping_First_Name,' ',Shipping_Last_Name) as 'Name',Order_ID,Shipping_Company,
                                 Shipping_Address_1,Shipping_City,Shipping_Postcode FROM Orderfeed WHERE Order_ID = $Order_id");
 
 
@@ -130,16 +131,25 @@ else{
       </div>
       <div class="col-md-6">
         <div class="card card-equal">
-          <h4>Ontvanger</h4>
-          <h5>
-          <?php  if(!empty($Order_info['Shipping_Company'])){echo $Order_info['Shipping_Company'].'<br>';}  ?>
-          <?php  if(!empty($Order_info['Name'])){echo $Order_info['Name'].'<br>';}  ?>
-          <?php  if(!empty($Order_info['Shipping_Address_1'])){echo $Order_info['Shipping_Address_1'].'<br>';}  ?>
-          <?php  if(!empty($Order_info['Shipping_Postcode']) && !empty($Order_info['Shipping_City'])){echo $Order_info['Shipping_Postcode'].' '.$Order_info['Shipping_City'];} ?>
-          </h5>
+          <div>
+            <h4>Ontvanger</h4>
+            <h5>
+              <?php  if(!empty($Order_info['Shipping_Company'])){echo $Order_info['Shipping_Company'].'<br>';}  ?>
+              <?php  if(!empty($Order_info['Name'])){echo $Order_info['Name'].'<br>';}  ?>
+              <?php  if(!empty($Order_info['Shipping_Address_1'])){echo $Order_info['Shipping_Address_1'].'<br>';}  ?>
+              <?php  if(!empty($Order_info['Shipping_Postcode']) && !empty($Order_info['Shipping_City'])){echo $Order_info['Shipping_Postcode'].' '.$Order_info['Shipping_City'];} ?>
+            </h5>
+          </div>
+          <div class="order-id-div">
+            <h4>Order ID</h4>
+            <h5>
+              #<?php  if(!empty($Order_info['Order_ID'])){echo $Order_info['Order_ID'].'<br>';}  ?>
+            </h5>
+          </div>
         </div>
       </div>
     </div>
+
 
     <div class="divider"></div>
 
@@ -213,7 +223,7 @@ else{
               <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
                 <div class="panel-body">
                   <p>
-                    Neem in dat geval contact op met de afzender. Bijvoorbeeld de klantenservice van de webshop waar je het pakket hebt besteld. Zij helpen je verder en kunnen bij de bezorgdienst een onderzoek opstarten als er iets mis is.
+                    Neem in dat geval contact op met de afzender. Bijvoorbeeld de klantenservice van de webshop of marketplace waar je het pakket hebt besteld.  Zij helpen je verder en kunnen bij de bezorgdienst een onderzoek opstarten als er iets mis is.
                   </p>
                 </div>
               </div>
@@ -222,7 +232,7 @@ else{
             <div class="panel" id="collapse5_container">
               <div class="panel-heading" role="tab" id="heading5">
                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5" class="collapsed">
-                  <h3>Ik geen tracking code (meer). Wat nu?</h3>
+                  <h3>Ik heb geen tracking code (meer). Wat nu?</h3>
                   <div class="glyphicon glyphicon-plus" style="float:right;position:relative;"></div>
                 </a>
               </div>
